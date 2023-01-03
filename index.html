@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="styles.css">
+	<script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
+    <script src="main.js" defer></script>
+	<title>Categories</title>
+</head>
+
+<body>
+	<header class="navigation">
+		<nav>
+			<ul>
+				<li> <a href="index.html" class="link"> Home </a></li>
+			</ul>
+		</nav>
+		<div id="mobilecont" onclick="toggleMobileMenu(this);">
+			<div class="bar1"></div>
+			<div class="bar2"></div>
+			<div class="bar3"></div>
+			<ul class="mobilemenu">
+				<li> <a href="index.html" class="link"> Home </a></li>
+			</ul>
+		</div>
+	</header>
+	<main>
+		<h2> Product Categories </h2>
+            <script id="categories-template" type="text/x-handlebars-template">
+				<div class="containervar1">
+					{{#each categories}}
+						<section>
+							<a href="category.html?categoryId={{id}}">
+								<img src="{{img_url}}"/>
+							</a>
+							<h2> {{title}} </h2>
+						</section>
+					{{/each}}
+				</div>
+            </script>
+			<section id="categories-placeholder" class="elvar1" >
+			</section>
+	</main>
+</body>
+</html>

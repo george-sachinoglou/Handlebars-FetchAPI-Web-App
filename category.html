@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<htmllang="en">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="styles.css">
+	<link rel="icon" href="images/logo.png" type="image/icon">
+	<script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
+    <script src="category.js" defer></script>
+	<title> Products </title>
+</head>
+<body>
+	<header class="navigation">
+		<nav>
+			<ul>
+				<li> <a href="index.html" class="link"> Home </a></li>
+			</ul>
+		</nav>
+		<div id="mobilecont" onclick="toggleMobileMenu(this);">
+			<div class="bar1"></div>
+			<div class="bar2"></div>
+			<div class="bar3"></div>
+			<ul class="mobilemenu">
+				<li> <a href="index.html" class="link"> Home </a></li>
+			</ul>
+		</div>
+	</header>
+	<main>
+		<h2>Products</h2>
+        <script id="products-template" type="text/x-handlebars-template">
+            <div class="containervar1">
+                {{#each products}}
+                    <section>
+                        <img src="{{image}}" class="product">
+                        <ul>
+                            <li>{{title}}</li>
+                            <li>{{description}}</li>
+                            <li>{{cost}} EU</li>
+                        </ul>
+                    </section>
+                {{/each}}
+            </div>
+        </script>
+        </section>
+        <section id="products-placeholder" class="elvar2" >
+        </section>
+		</div>
+	</main>
+</body>
+</html>
