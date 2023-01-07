@@ -26,10 +26,25 @@
 	</header>
 	<main>
 		<h2>Products</h2>
+		<form>
+			<p id = "fp">Filter products:</p>
+			<script id="filter-template" type="text/x-handlebars-template">
+					<input type="radio" id="all" name="sub" value="all">
+		  			<label for="all">All</label><br>
+					{{#each subcategories}}
+		  					<input type="radio" id="{{title}}" name="sub" value="{{id}}">
+		  					<label for="{{title}}">{{title}}</label><br>
+					{{/each}}
+					<input type=button id="filter_button" value="filter" onClick="getRadioValue(this.form.sub)">
+			</script>
+		</form>
+		<form id="filter-placeholder">
+		</form>
+		
         <script id="products-template" type="text/x-handlebars-template">
             <div class="containervar1">
                 {{#each products}}
-                    <section>
+                    <section data-subcategory-id="{{subcategory_id}}" class="pr">
                         <img src="{{image}}" class="product">
                         <ul>
                             <li>{{title}}</li>
@@ -40,7 +55,6 @@
                 {{/each}}
             </div>
         </script>
-        </section>
         <section id="products-placeholder" class="elvar2" >
         </section>
 		</div>

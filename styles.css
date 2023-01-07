@@ -246,6 +246,28 @@ a.link:active {
 	margin-left: -10px;
 }
 
+#filter-placeholder{
+	display: block;
+	margin: 20px;
+	text-align: left;
+}
+
+#fp{
+	display: block;
+	text-align: left;
+	margin:20px;
+}
+
+#filter_button{
+	margin-left: 20px;
+	height: fit-content;
+	width: 100px;
+}
+
+#all{
+	margin-left: 13px;
+}
+
 /* media query when screen below 80em */
 @media (max-width: 80em){
 
