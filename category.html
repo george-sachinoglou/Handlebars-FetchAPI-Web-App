@@ -3,18 +3,33 @@
 <head>
 	<meta charset="UTF-8">
 	<link rel="stylesheet" href="styles.css">
-	<link rel="icon" href="images/logo.png" type="image/icon">
 	<script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
     <script src="category.js" defer></script>
 	<title> Products </title>
 </head>
 <body>
 	<header class="navigation">
+		
+		<p id="httpstatus"></p>
+		<p id="loggedin"></p>
+		<form id="login" action="/" method="post">
+			<fieldset id="loginfieldset">
+				<legend>Login</legend>
+				<input type="text" id="username" name="username">
+			  	<label for="username">username</label><br>
+				<input type="text" id="password" name="password">
+			  	<label for="password">password</label><br>
+				<input type=submit id="submitbutton" value="Submit">
+			</fieldset>
+		</form>
 		<nav>
 			<ul>
 				<li> <a href="index.html" class="link"> Home </a></li>
 			</ul>
 		</nav>
+		<button class="button" id="cart" value="cart" onclick="showCart()"> Cart </button>
+		<p id="itemsincart">Items in cart: </p>
+		<p id="cartcount">0</p>
 		<div id="mobilecont" onclick="toggleMobileMenu(this);">
 			<div class="bar1"></div>
 			<div class="bar2"></div>
@@ -22,6 +37,7 @@
 			<ul class="mobilemenu">
 				<li> <a href="index.html" class="link"> Home </a></li>
 			</ul>
+			
 		</div>
 	</header>
 	<main>
@@ -44,16 +60,18 @@
         <script id="products-template" type="text/x-handlebars-template">
             <div class="containervar1">
                 {{#each products}}
-                    <section data-subcategory-id="{{subcategory_id}}" class="pr">
+                    <section data-subcategory-id="{{subcategory_id}}" data-product-id="{{id}}" data-product-title="{{title}}" data-product-cost="{{cost}}" class="pr">
                         <img src="{{image}}" class="product">
-                        <ul>
-                            <li>{{title}}</li>
-                            <li>{{description}}</li>
-                            <li>{{cost}} EU</li>
-                        </ul>
+							<ul>
+								<li>{{title}}</li>
+								<li>{{id}}</li>
+								<li>{{description}}</li>
+								<li>{{cost}} $</li>
+								<button id="{{id}}" class="buy" value="Buy"> Buy </button>
+							</ul>
                     </section>
                 {{/each}}
-            </div>
+			</div>
         </script>
         <section id="products-placeholder" class="elvar2" >
         </section>

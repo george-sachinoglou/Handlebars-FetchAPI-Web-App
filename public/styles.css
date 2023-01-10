@@ -1,0 +1,411 @@
+/* html variation 1 */
+html{
+	margin:0px;
+    padding:0px;
+	background-image: url(images/bgptbrown.jpg);
+}
+
+/* body style */
+body{
+	font-family:Merriweather;
+	margin:0px;
+	padding:0px;
+}
+
+/* create font */
+@font-face{
+	font-family:'Merriweather';
+	src: url(fonts/Merriweather-regular.ttf);
+	font-style: normal;
+	font-weight:100;
+}
+
+/* nav style */
+nav{
+	flex:1;
+	text-align:right;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+/* nav list element style */
+nav ul li{
+	margin-right: 1em;
+	display:inline-block;
+}
+
+/* list style */
+ul{
+	list-style-type:none;
+}
+
+/* link style */
+a{
+	text-decoration:none;
+	color: black;
+}
+
+/* h2 style */
+h2{
+	margin: 50px;
+}
+
+
+/* nav container style */
+.navigation{
+	display:flex;
+	align-items:center;
+	width:100%;
+	position:relative;
+	background-color:white;
+}
+
+
+/* main style */
+main{
+	padding-top:100px;
+	padding-bottom:100px;
+	margin: 0 auto;
+	text-align:center;
+}
+
+/* product category list element style */
+.elvar1 ul li{
+	border-radius: 5px;
+	text-shadow: 1px 1px;
+}
+
+/* index image style */
+.index_image img{
+	border-radius: 5px;
+	box-shadow: 6px 6px 6px rgb(51, 51, 51);
+	max-height:700px;
+	min-height: 350px;
+}
+
+/* product category image style */
+.elvar1 img{
+	border-radius: 5px;
+	box-shadow: 6px 6px 6px rgb(51, 51, 51);
+	max-height: 500px;
+	min-height:100px;
+	min-width: 100px;
+}
+
+/* product image style */
+.elvar2 img{
+	max-height: 400px;
+	min-height:200px;
+	min-width: 100px;
+}
+
+/* product list element style */
+.elvar2 ul :last-child{
+	text-shadow: 0px 0px 1px;
+}
+
+/* product image style */
+.product {
+	border-radius: 5px;
+	box-shadow: 6px 6px 6px rgb(51, 51, 51);
+}
+
+/* product rating image style */
+.elvar2 ul img{
+	max-height: 20px;
+	min-height:15px;
+	min-width: 50px;
+}
+
+/* container variation 1 style */
+.containervar1{
+	display:grid;
+	column-gap: 10px;
+	grid-template-columns: repeat(3, 1fr);
+}
+
+/* container variation 2 style */
+.containervar2{
+	display:grid;
+	grid-template-columns: repeat(2,1fr);
+	
+}
+
+/* container variation 3 style */
+.containervar3{
+	display:grid;
+	grid-template-rows: repeat(2,1fr);
+	row-gap: 50px;
+	margin:50px;
+}
+
+/* container variation 4 style */
+.containervar4{
+	display:grid;
+	grid-template-columns: repeat(2, 1fr);
+}
+
+
+/* container variation 1 list element style */
+.containervar1 ul li{
+	font-size: large;
+	margin: 20px;
+}
+
+/* container variation 3 paragraph style */
+.containervar3 p{
+	margin-top: 75px;
+	text-shadow: 0px 0px 2px;
+	margin-left: 100px;
+	margin-right: 100px;
+}
+
+/* container variation 3 image style */
+.containervar3 img{
+	max-height: 300px;
+	min-height:250px;
+	min-width: 250px;
+}
+
+/* button style */
+.button{
+	background: black;
+	color: white;
+	padding: 8px 30px;
+	border-radius:25px;
+}
+
+/* image style */
+img{
+max-width: 100%;
+}
+
+/* link hover style */
+a.link:hover {
+	border-radius: 10px;
+	background-color:white;
+}
+	
+/* link active style */
+a.link:active {
+	border-radius: 10px;
+	background-color:burlywood;
+}
+
+#mobilecont{
+	display: none;
+}
+
+#mobilecont div{
+	width: 35px;
+	height: 3px;
+	background-color: rgb(0, 0, 0);
+	margin: 6px 0;
+	transition: 0.4s;
+}
+
+.open .bar1{
+	-webkit-transform: rotate(-45deg) translate(-6px, 6px);
+	transform: rotate(-45deg) translate(-6px, 6px);
+}
+
+.open .bar2{
+	opacity: 0;
+}
+
+.open .bar3{
+	-webkit-transform: rotate(45deg) translate(-6px, -8px);
+	transform: rotate(45deg) translate(-6px, -8px);
+}
+
+.open .mobilemenu{
+	display: block;
+	position: absolute;
+	max-height: 200px;
+	text-align: left;
+	background-color: rgb(255, 255, 255);
+	border-bottom-left-radius: 10px;
+	width: fit-content;
+	height: fit-content;
+}
+
+.mobilemenu{
+	display: none;
+	position: absolute;
+	height: calc(100vh - 50px);
+	right: 0;
+} 
+
+.mobilemenu li{
+	padding-top: 16px;
+}
+
+.mobilemenu :last-child{
+	margin-top: 5px;
+	margin-right: 10px;
+	margin-left: -10px;
+}
+
+#filter-placeholder{
+	display: block;
+	margin: 20px;
+	text-align: left;
+}
+
+#fp{
+	display: block;
+	text-align: left;
+	margin:20px;
+}
+
+#filter_button{
+	margin-left: 20px;
+	height: fit-content;
+	width: 100px;
+}
+
+#all{
+	margin-left: 13px;
+}
+
+#login{
+	margin: 10px;
+	text-align: center;
+}
+
+#login input{
+	margin: 5px;
+}
+
+#loginfieldset{
+	display: block;
+}
+
+#loggedin{
+	display:none;
+	margin-left: 10px;
+	font-size: small;
+}
+
+#statushttp{
+	display:none;
+	margin-left: 10px;
+	font-size: small;
+}
+
+#cart{
+	margin-left:10px;
+	display: none;
+}
+
+#cartcount{
+	margin-left:10px;
+	display: none;
+}
+
+#itemsincart{
+	margin-left:10px;
+	display: none;
+}
+
+
+/* media query when screen below 80em */
+@media (max-width: 80em){
+
+	/* container variation 1 style */
+	.containervar1{
+		display:grid;
+		grid-template-columns: repeat(2, 1fr);
+	}
+
+	/* product catregory style */
+	.elvar1 img{
+		max-height: 400px;
+		min-height:100px;
+		min-width: 100px;
+	}
+
+	/* container variation 3 paragraph style */
+	.containervar3 p{
+		margin-left: 50px;
+		margin-right: 50px;
+	}
+
+	/* nav list element style */
+	nav ul li{
+		padding-top: 10px;
+		display:block;
+	}
+
+	/* nav list last child style */
+	nav ul :last-child{
+		margin-top: 10px;
+		padding-top: 10px;
+	} 
+
+	header nav{
+		display: none;
+	}
+
+	#mobilecont{
+		display: block;
+		margin-left: auto;
+		margin-right: 15px;
+		padding-top: 10px;
+		padding-bottom: 10px;
+	}
+
+	#mobilecont{
+		display: block;
+		margin-left: auto;
+		margin-right: 15px;
+		padding-top: 10px;
+		padding-bottom: 10px;
+	}
+}
+
+/* media query when screen below 40em */
+@media (max-width:40em){
+
+	/* container variation 1 style */
+	.containervar1{
+		display:grid;
+		grid-template-columns: repeat(1, 1fr);
+	}
+	
+	/* container variation 2 style */
+	.containervar2{
+		display:grid;
+		grid-template-columns: repeat(1,1fr);
+	}
+	
+	/* container variation 3 style */
+	.containervar3{
+		display:grid;
+		grid-template-columns: repeat(1,1fr);
+	}
+
+	/* container variation 3 paragraph style */
+	.containervar3 p{
+		margin-left: 20px;
+		margin-right: 20px;
+	}
+	
+	/* container variation 4 style */
+	.containervar4{
+		display:grid;
+		grid-template-columns: repeat(1, 1fr);
+	}
+
+	header nav{
+		flex:0;
+		display: none;
+	}
+
+	#mobilecont{
+		display: block;
+		margin-left: auto;
+		margin-right: 15px;
+	}
+}
+
