@@ -151,7 +151,7 @@ Add the appropriate link to the "Shopping Cart" area, which will lead to the pag
 cart.html, which will display the contents of a specific users' shopping cart. 
 Identification of the user will be done with appropriate query parameters at the
 URL of the page (eg cart.html?username=bzafiris&sessionId=1b9d6bcd-bbfd-4b2d-9b5d-ab8dfbbd4bed). When loading cart.html, the values ​​of
-of the query parameters will be received using JavaScript code (corresponding to PX 1) and
+of the query parameters will be received using JavaScript code (corresponding to Part 1) and
 a request will be made to the server in order to download the contents of the users' cart.
 
 The items of the product basket will be displayed in a table format, where each line will
